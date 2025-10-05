@@ -1,0 +1,27 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: ms-notification
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: ms-notification-test
+      auto-offset-reset: earliest
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ilahaguliyeva23@GMAIL.COM
+    password: wiftqensrvwibtgn
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+app:
+  topics:
+    restaurant-events: restaurant.created
+
